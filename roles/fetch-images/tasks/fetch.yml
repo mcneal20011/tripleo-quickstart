@@ -69,7 +69,7 @@
     # Get the expected checksum for the remote image.
     - name: Get image expected checksum
       command: >
-        curl -sfL {{ image.url }}.md5
+        curl -x "http://10.42.137.126:8080/" -sfL {{ image.url }}.md5
       register: md5_expected
 
     - name: sanitize the md5sum
