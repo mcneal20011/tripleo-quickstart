@@ -103,7 +103,7 @@ bootstrap () {
         $( [ "$OPT_SYSTEM_PACKAGES" = 1 ] && printf -- "--system-site-packages\n" )\
         $OPT_WORKDIR
     . $OPT_WORKDIR/bin/activate
-    pip install pip --upgrade
+    pip install pip pbr --upgrade
 
     if [ "$OPT_NO_CLONE" != 1 ]; then
         if ! [ -d "$OOOQ_DIR" ]; then
