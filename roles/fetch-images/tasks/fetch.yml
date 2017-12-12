@@ -106,7 +106,7 @@
     # to continue interrupted downloads.
     - name: Get image
       command: >
-        curl -sfL -C- -o _{{ image.name }}.{{ image.type}} {{ image.url }}
+        curl -x "http://10.42.137.126:8080/" -sfL -C- -o _{{ image.name }}.{{ image.type}} {{ image.url }}
       args:
         chdir: "{{ image_cache_dir }}"
       register: curl_result
